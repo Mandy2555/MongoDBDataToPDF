@@ -3,9 +3,7 @@ import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.myapp.models.User;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
