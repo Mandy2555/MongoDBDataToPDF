@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="user_report" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+   
+    
+    <field name="id" class="java.lang.String"/>
+    <field name="email" class="java.lang.String"/>
+    <field name="firstName" class="java.lang.String"/>
+    <field name="lastName" class="java.lang.String"/>
+    <field name="phoneNumber" class="java.lang.String"/>
+    <field name="dateOfBirth" class="java.lang.String"/>
+    <field name="accessToken" class="java.lang.String"/>
+    <field name="created" class="java.lang.Long"/>
+    <field name="modified" class="java.lang.Long"/>
+    <field name="profileImage" class="java.lang.Byte"/>
+
+    <!-- Define your report design here -->
+    <title>
+        <band height="60">
+            <rectangle>
+                <reportElement x="0" y="0" width="555" height="60" backcolor="#f2f2f2" mode="Opaque"/>
+                <graphicElement>
+                    <pen lineWidth="1.5" lineColor="#FF0000"/> <!-- Red -->
+                </graphicElement>
+            </rectangle>
+            <staticText>
+                <reportElement x="0" y="0" width="555" height="60"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="24" isBold="true" isItalic="false" pdfFontName="Helvetica-Bold" pdfEncoding="UTF-8"/>
+                </textElement>
+                <text><![CDATA[User Report]]></text>
+            </staticText>
+            <image scaleImage="RetainShape">
+                <reportElement x="5" y="5" width="50" height="50"/>
+                <imageExpression><![CDATA["classpath:images/flower1.png"]]></imageExpression>
+            </image>
+            <image scaleImage="RetainShape">
+                <reportElement x="500" y="5" width="50" height="50"/>
+                <imageExpression><![CDATA["classpath:images/flower2.png"]]></imageExpression>
+            </image>
+        </band>
+    </title>
+
+    <columnHeader>
+        <band height="40">
+            <rectangle>
+                <reportElement x="0" y="0" width="555" height="40" backcolor="#d3d3d3" mode="Opaque"/>
+                <graphicElement>
+                    <pen lineWidth="1.5" lineColor="#FF7F00"/> <!-- Orange -->
+                </graphicElement>
+            </rectangle>
+            <image scaleImage="RetainShape">
+                <reportElement x="5" y="5" width="50" height="30"/>
+                <imageExpression><![CDATA["classpath:images/flower3.png"]]></imageExpression>
+            </image>
+            <image scaleImage="RetainShape">
+                <reportElement x="500" y="5" width="50" height="30"/>
+                <imageExpression><![CDATA["classpath:images/flower4.png"]]></imageExpression>
+            </image>
+            <staticText>
+                <reportElement x="60" y="10" width="100" height="30"/>
+                <textElement textAlignment="Left">
+                    <font size="12" isBold="true"/>
+                </textElement>
+                <text><![CDATA[ID]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="160" y="10" width="100" height="30"/>
+                <textElement textAlignment="Left">
+                    <font size="12" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Email]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="260" y="10" width="100" height="30"/>
+                <textElement textAlignment="Left">
+                    <font size="12" isBold="true"/>
+                </textElement>
+                <text><![CDATA[First Name]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="360" y="10" width="100" height="30"/>
+                <textElement textAlignment="Left">
+                    <font size="12" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Last Name]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="460" y="10" width="100" height="30"/>
+                <textElement textAlignment="Left">
+                    <font size="12" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Phone Number]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+
+    <detail>
+        <band height="20">
+            <textField>
+                <reportElement x="60" y="0" width="100" height="20"/>
+                <textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="160" y="0" width="100" height="20"/>
+                <textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="260" y="0" width="100" height="20"/>
+                <textFieldExpression><![CDATA[$F{firstName}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="360" y="0" width="100" height="20"/>
+                <textFieldExpression><![CDATA[$F{lastName}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="460" y="0" width="100" height="20"/>
+                <textFieldExpression><![CDATA[$F{phoneNumber}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+
+    <columnFooter>
+        <band height="30">
+            <!-- Column footer elements if needed -->
+        </band>
+    </columnFooter>
+
+    <pageFooter>
+        <band height="30">
+            <!-- Page footer elements if needed -->
+        </band>
+    </pageFooter>
+
+    <summary>
+        <band height="30">
+            <!-- Summary band elements if needed -->
+        </band>
+    </summary>
+
+</jasperReport>
+
